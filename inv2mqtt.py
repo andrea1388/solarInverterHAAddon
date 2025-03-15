@@ -23,10 +23,19 @@ def main():
         data = json.load(file)
 
     global debug
-    if(len(sys.argv)>1):
-        arg = sys.argv[1]
-        if(arg=="d"): debug=True
+    debug=data["debug"]
+    serialdev=data["serialdev"]
+    mqttserver=data["mqttserver"]
+    mqttserverport=data["mqttserverport"]
+    mqttuser=data["mqttuser"]
+    mqttpwd=data["mqttpwd"]
+    
     print("debug=",debug)
+    print("serialdev=",serialdev)
+    print("mqttserver=",mqttserver)
+    print("mqttserverport=",mqttserverport)
+    print("mqttuser=",mqttuser)
+    print("mqttpwd=",mqttpwd)    
     serialport.port=serialdev
     serialport.open()
     serialport.reset_input_buffer()
