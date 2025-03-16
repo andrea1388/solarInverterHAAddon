@@ -39,16 +39,14 @@ def main():
     serialport.port=serialdev
     serialport.open()
     serialport.reset_input_buffer()
-
     mqttc.on_connect = on_connect
     mqttc.on_disconnect = on_disconnect
     mqttc.on_message = on_message
     mqttc.on_connect_fail = on_connect_fail
     if(debug): mqttc.on_log = on_log
     mqttc.username_pw_set(mqttuser, mqttpwd)
-    print (mqttuser, mqttpwd)
-    mqttc.tls_set(certpath)
-    mqttc.tls_insecure_set(True)
+    # mqttc.tls_set(certpath)
+    # mqttc.tls_insecure_set(True)
     mqttc.connect_timeout=60
     mqttc.connect_async(mqttserver, mqttserverport, 60)
 

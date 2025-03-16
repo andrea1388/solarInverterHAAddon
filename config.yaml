@@ -11,6 +11,20 @@ arch:
   - i386
 startup: application
 options:
-  serialdev: "/dev/ttyUSBInverter"
+  serialdev: null
+  debug: false
+  mqttserver= "localhost"
+  mqttserverport: 1388
+  mqttuser: homeassistant
+  mqttpwd=: ""
+
+
+
 schema:
-  serialdev: str
+  serialdev: device(subsystem=tty)
+  debug: bool
+  mqttserver: str
+  mqttserverport: int
+  mqttuser: str
+  mqttpwd=: password
+
