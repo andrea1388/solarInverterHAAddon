@@ -11,11 +11,11 @@ arch:
   - i386
 startup: application
 options:
-  serialdev: null
+  serialdev: "core-mosquitto"
   debug: false
   mqttserver: "localhost"
-  mqttserverport: 1388
-  mqttuser: homeassistant
+  mqttserverport: 1883
+  mqttuser: "validuser"
   mqttpwd: ""
 schema:
   serialdev: device(subsystem=tty)

@@ -7,12 +7,10 @@ RUN apk add --no-cache python3 py3-pip
 RUN pip install --break-system-packages paho-mqtt
 RUN pip install --break-system-packages pyserial
 
-# Python 3 HTTP Server serves the current working dir
-# So let's set it to our add-on persistent data directory.
 # WORKDIR /data
 
 # Copy data for add-on
 COPY run.sh crc.py inverterParam.py param.py inv2mqtt.py /
 RUN chmod a+x /run.sh
 
-#CMD [ "/run.sh" ]
+CMD [ "/run.sh" ]
