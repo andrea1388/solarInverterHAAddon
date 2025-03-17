@@ -19,7 +19,7 @@ noresp=0
 numreadings=0
 
 def main():
-    with open('data.json', 'r') as file:
+    with open('/data/options.json', 'r') as file:
         data = json.load(file)
 
     global debug

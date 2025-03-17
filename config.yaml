@@ -1,7 +1,7 @@
-name: "InverterToHa"
+name: "solar"
 description: "Bridge tra i dispositivi 485 e HA"
-version: "1"
-slug: "InverterToHa"
+version: "4"
+slug: "solar"
 init: false
 arch:
   - aarch64
@@ -13,18 +13,15 @@ startup: application
 options:
   serialdev: null
   debug: false
-  mqttserver= "localhost"
+  mqttserver: "localhost"
   mqttserverport: 1388
   mqttuser: homeassistant
-  mqttpwd=: ""
-
-
-
+  mqttpwd: ""
 schema:
   serialdev: device(subsystem=tty)
   debug: bool
   mqttserver: str
   mqttserverport: int
   mqttuser: str
-  mqttpwd=: password
+  mqttpwd: password
 

@@ -5,4 +5,4 @@ serialdev="$(bashio::config 'serialdev')"
 
 echo "Starting inv2mqtt ${serialdev}"
 
-python3 inv2mqtt.py ${serialdev}
+python3 -u inv2mqtt.py ${serialdev}
