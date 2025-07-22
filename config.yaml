@@ -1,5 +1,5 @@
 name: "solar"
-description: "Bridge tra i dispositivi 485 e HA"
+description: "read data from voltronic solar inverter"
 version: "4"
 slug: "solar"
 init: false
